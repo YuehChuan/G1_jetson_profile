@@ -97,7 +97,7 @@ GPU / CPU / RAM Plot
 ## Example
 
 ```bash
-tegrastats --interval 100 > tegrastats_$(date +%Y%m%d_%H%M%S).log 2>&1 &
+tegrastats --interval 10 > tegrastats_$(date +%Y%m%d_%H%M%S).log 2>&1 &
 
 pkill tegrastats
 
@@ -106,5 +106,5 @@ python tegra_plotter.py --log_path tegrastats_20260821_135119.log
 gnuplot -persist plot.gp
 ```
 
-> `--interval 100` 表示每 100 ms 取樣一次，也就是 10 Hz。
+> `--interval 10` 表示每 10 ms 取樣一次，也就是 100 Hz。
 
